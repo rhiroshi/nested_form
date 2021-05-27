@@ -53,7 +53,7 @@
       field
         .trigger({ type: 'nested:fieldAdded', field: field })
         .trigger({ type: 'nested:fieldAdded:' + assoc, field: field });
-      return field;
+      return {field: field, id: new_id};
     },
     newId: function() {
       return new Date().getTime();
